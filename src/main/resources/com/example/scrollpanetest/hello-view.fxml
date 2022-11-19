@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scrollpanetest.HelloController">
+    <TabPane fx:id="tabPane" style="-fx-background-color: red;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <Tab style="-fx-background-color: pink;" text="Test">
+            <BorderPane fx:id="borderPane" style="-fx-background-color: blue;">
+                <center>
+                    <ScrollPane fx:id="scrollPane" prefHeight="122.0" prefWidth="512.0" style="-fx-background-color: purple;">
+                        <content>
+                            <VBox fx:id="content" style="-fx-background-color: yellow;">
+                                <GridPane fx:id="headerGridPane" style="-fx-background-color: white;">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.263" />
+                                    </columnConstraints>
+                                </GridPane>
+                                <GridPane fx:id="mainGridPane" style="-fx-background-color: orange;" />
+                            </VBox>
+                        </content>
+                    </ScrollPane>
+                </center>
+                <bottom>
+                    <TextArea fx:id="textArea" prefHeight="83.0" prefWidth="512.0" style="-fx-background-color: green;" />
+                </bottom>
+            </BorderPane>
+        </Tab>
+    </TabPane>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
